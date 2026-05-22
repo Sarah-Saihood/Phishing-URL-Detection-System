@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Phishing URL Detection</title>
+
+    <style>
+
+        *{
+            margin:0;
+            padding:0;
+            box-sizing:border-box;
+        }
+
+        body{
+
+            font-family: Arial, sans-serif;
+
+            height:100vh;
+
+            display:flex;
+
+            justify-content:center;
+
+            align-items:center;
+
+            background: linear-gradient(
+                135deg,
+                #141e30,
+                #243b55
+            );
+
+            color:white;
+        }
+
+        .container{
+
+            width:550px;
+
+            background:rgba(255,255,255,0.12);
+
+            padding:40px;
+
+            border-radius:20px;
+
+            text-align:center;
+
+            backdrop-filter: blur(8px);
+
+            box-shadow:0 10px 30px rgba(0,0,0,0.4);
+        }
+
+        h1{
+
+            font-size:38px;
+
+            margin-bottom:15px;
+        }
+
+        p{
+
+            font-size:18px;
+
+            color:#e0e0e0;
+
+            margin-bottom:30px;
+        }
+
+        input{
+
+            width:100%;
+
+            padding:16px;
+
+            border:none;
+
+            border-radius:12px;
+
+            font-size:17px;
+
+            outline:none;
+        }
+
+        button{
+
+            margin-top:25px;
+
+            width:100%;
+
+            padding:15px;
+
+            border:none;
+
+            border-radius:12px;
+
+            background:#00b4db;
+
+            color:white;
+
+            font-size:18px;
+
+            cursor:pointer;
+
+            transition:0.3s;
+        }
+
+        button:hover{
+
+            background:#0083b0;
+        }
+
+    </style>
+
+</head>
+
+<body>
+
+    <div class="container">
+
+        <h1>
+             
+            Phishing URL Detection System
+
+        </h1>
+
+        <p>
+            Enter any website link to check whether it is safe or suspicious.
+        </p>
+
+        <form method="POST">
+
+            <input
+                type="text"
+                name="url"
+                placeholder="https://example.com"
+                required
+            >
+
+            <button type="submit">
+                Check URL
+            </button>
+
+        </form>
+
+    </div>
+
+</body>
+
+</html>

@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <title>Phishing Detected</title>
+
+    <style>
+
+        body{
+
+            margin:0;
+
+            font-family:Arial, sans-serif;
+
+            height:100vh;
+
+            display:flex;
+
+            justify-content:center;
+
+            align-items:center;
+
+            background:linear-gradient(
+                135deg,
+                #2b0000,
+                #7a0000
+            );
+
+            color:white;
+        }
+
+        .container{
+
+            width:550px;
+
+            background:rgba(255,255,255,0.1);
+
+            padding:40px;
+
+            border-radius:20px;
+
+            text-align:center;
+
+            box-shadow:0 10px 30px rgba(0,0,0,0.5);
+        }
+
+        h1{
+
+            color:#ff4d4d;
+
+            margin-bottom:25px;
+
+            font-size:38px;
+        }
+
+        p{
+
+            font-size:20px;
+
+            margin:15px 0;
+
+            line-height:1.6;
+        }
+
+        .message{
+
+            margin-top:20px;
+
+            padding:15px;
+
+            background:rgba(255,255,255,0.12);
+
+            border-radius:12px;
+
+            color:#ffd6d6;
+        }
+
+        a{
+
+            display:inline-block;
+
+            margin-top:30px;
+
+            padding:14px 28px;
+
+            background:#ff4d4d;
+
+            color:white;
+
+            text-decoration:none;
+
+            border-radius:10px;
+
+            font-size:18px;
+        }
+
+        a:hover{
+
+            background:#ff1a1a;
+        }
+
+    </style>
+
+</head>
+
+<body>
+
+    <div class="container">
+
+        <h1>
+            ⚠ Phishing Website Detected
+        </h1>
+
+        <p>
+            <strong>URL:</strong>
+            {{ url }}
+        </p>
+
+        <p>
+            <strong>Detection Probability:</strong>
+            {{ probability }}%
+        </p>
+
+        <div class="message">
+            {{ status_message }}
+        </div>
+
+        <a href="/">
+            Check Another URL
+        </a>
+
+    </div>
+
+</body>
+
+</html>

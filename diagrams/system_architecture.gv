@@ -1,0 +1,76 @@
+digraph PhishingDetectionSystem {
+
+    rankdir=LR;
+
+    node [
+        shape=box,
+        style=filled,
+        color=lightblue,
+        fontname=Arial,
+        fontsize=12
+    ];
+
+    URL_Input [
+        label="User URL Input"
+    ];
+
+    URL_Validation [
+        label="URL Validation"
+    ];
+
+    HTTPS_Check [
+        label="HTTPS Security Check"
+    ];
+
+    Connection_Check [
+        label="Website Connection Check"
+    ];
+
+    Blacklist [
+        label="Phishing Blacklist"
+    ];
+
+    Whitelist [
+        label="Trusted Whitelist"
+    ];
+
+    Feature_Extraction [
+        label="Feature Extraction"
+    ];
+
+    ML_Model [
+        label="Machine Learning Model"
+    ];
+
+    Trusted_Result [
+        label="Trusted Website",
+        color=lightgreen
+    ];
+
+    Phishing_Result [
+        label="Phishing Website",
+        color=lightcoral
+    ];
+
+    URL_Input -> URL_Validation;
+
+    URL_Validation -> HTTPS_Check;
+
+    HTTPS_Check -> Connection_Check;
+
+    Connection_Check -> Blacklist;
+
+    Blacklist -> Phishing_Result;
+
+    Blacklist -> Whitelist;
+
+    Whitelist -> Trusted_Result;
+
+    Whitelist -> Feature_Extraction;
+
+    Feature_Extraction -> ML_Model;
+
+    ML_Model -> Trusted_Result;
+
+    ML_Model -> Phishing_Result;
+}

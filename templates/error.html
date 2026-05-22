@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <title>Error</title>
+
+    <style>
+
+        body{
+
+            margin:0;
+
+            font-family:Arial, sans-serif;
+
+            height:100vh;
+
+            display:flex;
+
+            justify-content:center;
+
+            align-items:center;
+
+            background:linear-gradient(
+                135deg,
+                #4b3200,
+                #8b5e00
+            );
+
+            color:white;
+        }
+
+        .container{
+
+            width:500px;
+
+            background:rgba(255,255,255,0.1);
+
+            padding:40px;
+
+            border-radius:20px;
+
+            text-align:center;
+
+            box-shadow:0 10px 30px rgba(0,0,0,0.5);
+        }
+
+        h1{
+
+            color:#ffd966;
+
+            margin-bottom:25px;
+        }
+
+        p{
+
+            font-size:20px;
+
+            margin:15px 0;
+        }
+
+        a{
+
+            display:inline-block;
+
+            margin-top:25px;
+
+            padding:12px 25px;
+
+            background:#d9a300;
+
+            color:white;
+
+            text-decoration:none;
+
+            border-radius:10px;
+        }
+
+    </style>
+
+</head>
+
+<body>
+
+    <div class="container">
+
+        <h1>
+            Warning / Error
+        </h1>
+
+        <p>
+            <strong>URL:</strong>
+            {{ url }}
+        </p>
+
+        <p>
+            {{ message }}
+        </p>
+
+        <a href="/">
+            Back
+        </a>
+
+    </div>
+
+</body>
+
+</html>
