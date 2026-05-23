@@ -99,8 +99,18 @@ System Workflow
 markdown
 
 ## How to Run the Project
+## 1-Executable Version
 
-### 1. Create Virtual Environment
+A standalone executable version of the application is available inside the `dist` folder:
+
+`dist/Phishing_URL_Detector.exe`
+
+Simply run the executable file to start the phishing URL detection system without requiring Python or VS Code.
+
+## 2- By using python
+Open the project folder in VS Code, then run the following commands:
+
+## 1. Create Virtual Environment
 
 ```bash
 py -3.9 -m venv venv
